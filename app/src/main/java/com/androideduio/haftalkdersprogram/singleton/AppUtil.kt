@@ -1,5 +1,6 @@
 package com.androideduio.haftalkdersprogram.singleton
 
+import com.androideduio.haftalkdersprogram.enums.Days
 import com.androideduio.haftalkdersprogram.models.LessonModel
 
 
@@ -8,6 +9,11 @@ import com.androideduio.haftalkdersprogram.models.LessonModel
  * 20.01.2018                |
  * CodeProject.G@gmail.com   |
  ****************************/
+
+/**
+ * Singleton yapisini kullanmanin en hizli yolu "object" ifadesini kullanmak.
+ * Yanlis kullanimin memmory leak'e goturecegini unutmayin.
+ */
 object AppUtil {
 
     fun getLessonList(): ArrayList<LessonModel> {
@@ -54,5 +60,40 @@ object AppUtil {
         lessonList.add(lessonModel)
 
         return lessonList
+    }
+
+    fun getNextDay(day: String): String {
+
+        return when (day) {
+
+            Days.Pazartesi.toString() -> {
+
+                Days.Salı.toString()
+            }
+
+            Days.Salı.toString() -> {
+
+                Days.Çarşamba.toString()
+            }
+
+            Days.Çarşamba.toString() -> {
+
+                Days.Perşembe.toString()
+            }
+
+            Days.Perşembe.toString() -> {
+
+                Days.Cuma.toString()
+            }
+
+            Days.Cuma.toString() -> {
+
+                Days.Pazartesi.toString()
+            }
+
+            else -> {
+                ""
+            }
+        }
     }
 }

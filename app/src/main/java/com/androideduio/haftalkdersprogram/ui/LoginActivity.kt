@@ -18,14 +18,18 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         activity_login_btnLogin.setOnClickListener(this)
     }
 
-    override fun onClick(p0: View?) {
+    override fun onClick(view: View?) {
 
+        // intent'de gonderilecek ViewModel nesnesini olustur.
         val userInfo = UserInfoViewModel(activity_login_edtUserName.text.toString())
 
+        // intent olustur. context'i ver ve gidecegi activity'i belirt.
         val intent = Intent(this, ProgramActivity::class.java)
 
+        // intent ile tasinacak bir veri varsa key, value seklinde bunlari ver.
         intent.putExtra(ViewModelEnum.UserName.toString(), userInfo)
 
+        // intent'i gonder.
         startActivity(intent)
     }
 }

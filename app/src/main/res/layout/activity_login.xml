@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:background="#8064B5F6"
         android:gravity="center"
+        android:orientation="horizontal"
         android:padding="16dp">
 
         <TextView
