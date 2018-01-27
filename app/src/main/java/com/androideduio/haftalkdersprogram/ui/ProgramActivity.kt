@@ -69,15 +69,15 @@ class ProgramActivity : AppCompatActivity(), OnFragmentInteractionListener {
 
             val resultViewModel = ResultViewModel()
 
-//            val resultFragmentListView = ResultFragmentListView.newInstance(resultViewModel)
-            val resultFragmentRecyclerView = ResultFragmentRecyclerView.newInstance(resultViewModel)
+            val resultFragmentListView = ResultFragmentListView.newInstance(resultViewModel)
+            //  val resultFragmentRecyclerView = ResultFragmentRecyclerView.newInstance(resultViewModel)
 
             resultViewModel.lessonsByDays = lessonsByDays
 
             fragmentTransaction = fragmentManager!!.beginTransaction()
 
 //            fragmentTransaction!!.replace(R.id.activity_program_frmFragment, resultFragmentListView)
-            fragmentTransaction!!.replace(R.id.activity_program_frmFragment, resultFragmentRecyclerView)
+            fragmentTransaction!!.replace(R.id.activity_program_frmFragment, resultFragmentListView)
             fragmentTransaction!!.commit()
         }
     }

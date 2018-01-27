@@ -35,7 +35,7 @@ class ResultFragmentListView : Fragment(), AdapterView.OnItemClickListener {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        masterView = inflater.inflate(R.layout.fragment_result, container, false)
+        masterView = inflater.inflate(R.layout.fragment_result_listview, container, false)
 
         // adapter'dan item'larin listesi verilerek nesne yaratilir.
         val lessonListAdapter = LessonListAdapter(resultViewModel.lessonsByDays)

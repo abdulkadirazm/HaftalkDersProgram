@@ -36,7 +36,7 @@ class ResultFragmentRecyclerView : Fragment(), (Map.Entry<String, ArrayList<Stri
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        masterView = inflater.inflate(R.layout.fragment_result, container, false)
+        masterView = inflater.inflate(R.layout.fragment_result_listview, container, false)
 
         // recyclerView'in nasil gorunecegini belirtmek icin layoutManager tanimlanir.
         // Linear ya da Grid gibi secenekleri vardir.
