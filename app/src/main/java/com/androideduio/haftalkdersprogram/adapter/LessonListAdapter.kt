@@ -73,6 +73,15 @@ class LessonListAdapter(lessonList: LinkedHashMap<String, ArrayList<String>>)
         val itemView = convertView
                 ?: LayoutInflater.from(parent.context).inflate(R.layout.adapter_lessonlist_item, parent, false)
 
+//        var itemView: View? = null
+//        if (convertView == null) {
+//            itemView = LayoutInflater.from(parent.context).inflate(R.layout.adapter_lessonlist_item, parent, false)
+//        } else {
+//            itemView = convertView
+//        }
+
+        //val itemView = LayoutInflater.from(parent.context).inflate(R.layout.adapter_lessonlist_item, parent, false)
+
         val txtDay = itemView!!.findViewById<TextView>(R.id.adapter_lessonlist_item_txtDay)
         val txtLesson1 = itemView.findViewById<TextView>(R.id.adapter_lessonlist_item_txtLesson1)
         val txtLesson2 = itemView.findViewById<TextView>(R.id.adapter_lessonlist_item_txtLesson2)
